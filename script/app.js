@@ -36,51 +36,52 @@ function createCC(parentId){
     if(document.getElementById(`${parentId}_CC`) == null){
         var parent = document.getElementById(parentId);
 
-            // 本体
-            var Pn = document.createElement("div");
-            Pn.classList.add(`CCWrapper`);
-            Pn.id = `${parentId}_CC`;
-            parent.appendChild(Pn);
+        // 本体
+        var Pn = document.createElement("div");
+        Pn.classList.add(`CCWrapper`);
+        Pn.id = `${parentId}_CC`;
+        parent.appendChild(Pn);
         
-            // 値表示部
-            var counter = document.createElement("div");
-            counter.classList.add(`${parentId}_CC`);
-            counter.id = `${parentId}CC_out`;
-            counter.textContent = "0";
+        // 値表示部
+        var counter = document.createElement("div");
+        counter.classList.add(`${parentId}_CC`);
+        counter.id = `${parentId}CC_out`;
+        counter.textContent = "0";
                 
         
-            // +ボタン
-            var plusButton = document.createElement("button");
+        // +ボタン
+        var plusButton = document.createElement("button");
             plusButton.textContent = "＋";
             plusButton.onclick = function(){
-                increment(`${parentId}CC_out`);
-            };
+            increment(`${parentId}CC_out`);
+        };
     
-            // -ボタン
-            var minusButton = document.createElement("button");
+        // -ボタン
+        var minusButton = document.createElement("button");
             minusButton.textContent = "－";
             minusButton.onclick = function(){
-                decrement(`${parentId}CC_out`);
-            }
+            decrement(`${parentId}CC_out`);
+        };
                 
-                //下につける
-            Pn.appendChild(counter);
-            Pn.appendChild(plusButton);
-            Pn.appendChild(minusButton);
+        //下につける
+        Pn.appendChild(counter);
+        Pn.appendChild(plusButton);
+        Pn.appendChild(minusButton);
     }
 }
 
 /**************************************************
         ioカウンター
 ***************************************************/
-function Createtext_element() {
-    var o = document.createElement("div");
-    
-    o.setAttribute("class", "io_Counter");
-    document.getElementById("io_Counter_wrapper").appendChild(o);
+function Createio(parentId) {
+    var parent = document.getElementById(parentId);
+
+    io = createElement("div");
+    io.classList.add("io_Counter");
+
+    parent.appendChild("io");
 }
-    
-        
+ 
 /**************************************************
         ダイス 
 ***************************************************/
