@@ -58,15 +58,27 @@ function createCC(parentId){
     
         // -ボタン
         var minusButton = document.createElement("button");
-            minusButton.textContent = "－";
-            minusButton.onclick = function(){
+        minusButton.textContent = "－";
+        minusButton.onclick = function(){
             decrement(`${parentId}CC_out`);
         };
+
+        // 削除ボタン
+        var removeButton = document.createElement("button");
+        removeButton.textContent = "x";
+        removeButton.onclick = function(){
+            minusButton.remove();
+            plusButton.remove();
+            counter.remove();
+            Pn.remove();
+            this.remove();
+        }
                 
         //下につける
         Pn.appendChild(counter);
         Pn.appendChild(plusButton);
         Pn.appendChild(minusButton);
+        Pn.appendChild(removeButton);
     }
 }
 
@@ -77,7 +89,7 @@ function Createio(parentId) {
     var parent = document.getElementById(parentId);
 
     io = createElement("div");
-    io.classList.add("io_Counter");
+    io.classList.add("ioCWrapper");
 
     parent.appendChild("io");
 }
