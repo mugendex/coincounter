@@ -2,22 +2,23 @@
 <html lang = "ja">
     <head>
         <meta charset = "UTF-8">
-        <title>coin counter</title>
+        <title>Multi Counter</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     </head>
     <body>
         <header>
-            
+            <div class="header">Multi Counter</div>
         </header>
-        <div id="P1_Wrapper" class>
-            <button onclick = "createCC('P1_Contents')">コインカウンター追加</button>
-            <div id="P1_Contents"></div>
+        <div id="P1_Wrapper" class="P1 Wrapper">P1<br>
+            <button onclick="CreateCC('P1')" class="P1 btn">コインカウンター追加</button>
+            <button onclick="Createio('P1')" class="P1 btn">ioカウンター追加</button>
+            <div id="P1" class="P1"></div>
         </div>
 
-        <div id="P2_Wrapper"></div>
-            <button onclick="createCC('P2_Contents')">コインカウンター追加</button>
-            <div id="P2_Contents"></div>
+        <div id="P2_Wrapper" class="P2 Wrapper">P2<br>
+            <button onclick="CreateCC('P2')" class="P2 btn">コインカウンター追加</button>
+            <div id="P2" class="P2"></div>
         </div>
         
         <script src="../script/app.js"></script>

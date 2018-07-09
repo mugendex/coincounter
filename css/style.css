@@ -5,7 +5,42 @@
     padding: 0;
 }
 
-.CoinCounter{
 
+
+/*ヘッダー*/
+.header{
+    width: 100%;
+    height: 20%;
+    font-size: 30px;
+    font-family: serif;
+    color: rgb(255, 0, 221);
+    background-color: rgba(0, 255, 0, 0.221);
 }
 
+/*ラッパー*/
+.Wrapper{
+    width: 50%;
+    height: 80%;
+    float: left;
+}
+
+.P1.btn{
+    background-color: gray;
+}
+.P2.btn{
+    background-color: gray;
+}
+
+
+/*P1のエリア*/
+
+.P1{
+    background-color: black;
+    color: white;
+}
+
+/*P2のエリア*/
+.P2{
+    background-color: white;
+    color: black;
+}
